@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Chetan Pardeep</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="jquery.vide.js"></script>
+    </head>
+    
+    <body>
+
+<!--First page content-->
+        <div id="home" data-vide-bg="Wind Turbine on a Field at Sunrise.mp4">
+            <h1><font color="#f1f1f1">HI,</font><br><br>IM CHETAN</h1>
+            <div id="scroll">
+                <p>SCROLL</p>
+                <span class="scroll-down"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+            </div>
+        </div>
+
+<!--Navigation Bar-->
+        <nav id="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+<!--Second page content-->
+        <div id= "about">
+            <div class="content">
+                <div class="start">I am a </div>
+                <div class="animation">
+                    <div id="text">Developer</div>
+                </div>
+            </div>
+            <img src="IMG_3496.jpg" alt="Avatar">
+            <p> Currently studying BSc Human Resource Management at Aston University with experience in customer services. Competencies in Business, Information Technology, and Media, with a strong interest in technological advancements. Enthusiastic about supporting HR related activities, whilst meeting new people, being challenged and taking on new experiences. Seeking to further broaden my knowledge and gain experiences within the Human Resource department.</p>
+        </div>
+
+        <!--Third page content-->
+        <div id="skills">
+            <h2>My Skills</h2>
+            <div id="skills1">
+
+                <p>HTML/CSS</p>
+                <div class="skills html">85%</div>
+            
+                <p>JavaScript</p>
+                <div class="skills js">68%</div>
+
+                <p>PHP</p>
+                <div class="skills php">75%</div>
+            
+                <p>SQL</p>
+                <div class="skills sql">89%</div>
+                
+                <p>Java</p>
+                <div class="skills java">67%</div>
+
+                <p>Python</p>
+                <div class="skills python">50%</div>
+            </div>
+
+        </div>
+
+        <!--Fourth page content-->
+        <div id="portfolio">
+            <h1>Portfolio</h1>
+            <div id="container">
+
+                <input type="radio" id="i1" name="images" checked/>
+                <input type="radio" id="i2" name="images"/>
+                <input type="radio" id="i3" name="images"/>
+
+                <div class="slide-img" id="one">
+                    <img src="coming.jpg">
+                </div>
+
+                <div class="slide-img" id="two">
+                    <img src="http://ipi.org.sg/wp-content/uploads/2017/04/Coming-Soon-PNG.png">
+                </div>
+
+                <div class="slide-img" id="three">
+                    <img src="file:///Users/chetanpardeep/Desktop/untitled%20folder/IMG_3496.jpg">
+                </div>
+
+                <div id="nav_slide">
+                    <label for="i1" class="dots" id="dot1"></label>
+                    <label for="i2" class="dots" id="dot2"></label>
+                    <label for="i3" class="dots" id="dot3"></label>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!--Fifth page content-->
+        <div id="resume">
+            <a href="" id="resume1">
+                <i class="fa fa-download" aria-hidden="true"></i>Resume
+            </a>
+        </div>
+
+        <!--Sixth page content-->
+        <div id="contact">
+            <div id="account">
+                <a href="https://www.instagram.com/chetz96/">
+                    <i class="fa fa-instagram" aria-hidden="true"></i> 
+                </a>
+                <a href="https://www.linkedin.com/in/chetan-pardeep-4337b9169/">
+                    <i class="fa fa-linkedin-square"></i>
+                </a>
+                <a href="https://www.facebook.com/chetz96">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                </a>
+                <a href="https://plus.google.com/u/0/111768161526715936073">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i> 
+                </a>
+            </div>
+             <p id="copyright">COPYRIGHT © 2018 CHETAN PARDEEP</p>
+        </div>
+
+        <script>
+            window.onscroll = function() {myFunction()};
+            var navbar = document.getElementById("navbar");
+            var sticky = navbar.offsetTop;
+
+            function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                } 
+                else {
+                    navbar.classList.remove("sticky");
+                }
+            }
+            
+            var text = ['Programmer.','Entrepreneur.','Games Freak!','Photographer.'];
+            var index = 0;
+
+            function changeText() {
+                document.getElementById("text").innerText = text[index];
+                index = (index + 1) % 4;
+            }
+            var interval = window.setInterval(changeText, 1200);
+            window.onunload = function () {
+                window.clearInterval(interval);
+            }
+        </script>
+
+</body>
+</html>
